@@ -2,14 +2,66 @@
 <!--+
     | Main index
     +-->
-<html>
+<html ng-app="activity">
     <head>
-        <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="Activity - microblogging" />
+        <meta name="keywords" content="blog" />
+        <meta name="author" content="Lars Boegild Thomsen <lbthomsen@gmail.com>" />
+
+        <base href="/" target="self" />
+
+        <title>Activity</title>
+
+        <!--build-css-start-->
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css" />
+        <!--build-css-end-->
+
     </head>
-    <body>
-        <div>TODO write content</div>
+    <body ng-cloak>
+        
+        <div><loading></loading></div>
+        
+        <app-page></app-page>
+        
+        <!--build-js-start-->
+
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="node_modules/moment/moment.js"></script>
+
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="node_modules/angular-resource/angular-resource.js"></script>
+        <script src="node_modules/angular-animate/angular-animate.js"></script>
+        <script src="node_modules/angular-touch/angular-touch.js"></script>
+        <script src="node_modules/angular-local-storage/dist/angular-local-storage.js"></script>
+        <script src="node_modules/angular-loading-lbthomsen/angular-loading.js"></script>
+        <script src="node_modules/angular-head-lbthomsen/angular-head.js"></script>
+        <script src="node_modules/angular-inview-lbthomsen/angular-inview.js"></script>
+        <script src="node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+        <script src="node_modules/ui-bootstrap4/dist/ui-bootstrap-tpls.js"></script>
+        <script src="node_modules/angular-moment/angular-moment.js"></script>
+
+        <script src="services/system.service.js"></script>
+
+        <script src="directives/app-page.directive.js"></script>
+        <script src="directives/app-menu.directive.js"></script>
+        <script src="directives/app-header.directive.js"></script>
+        <script src="directives/app-lside.directive.js"></script>
+        <script src="directives/app-rside.directive.js"></script>
+        <script src="directives/app-main.directive.js"></script>
+        <script src="directives/app-footer.directive.js"></script>
+
+        <script src="routes/static.routes.js"></script>
+
+        <script src="application.js"></script>
+        <!--build-js-end-->
+        
     </body>
 </html>
 <!--+

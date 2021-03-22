@@ -6,20 +6,11 @@ process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 const settings = require("./settings.js");
 const fs = require("fs");
-const IPFS = require("./config/ipfs.js");
-const Web3 = require("./config/web3.js");
-//const OrbitDB = require("./config/orbitdb.js");
 const express = require("./config/express.js");
-//const PostDb = require("./app/postdb.js");
-//const UserDb = require("./app/userdb.js");
-//const MessageDb = require("./app/messagedb.js");
 
 async function run() {
     
-    var ipfs = await IPFS();
-    //var orbitdb = await OrbitDB(ipfs);
-    var web3Connections = await Web3();
-    var app = express(ipfs, web3Connections);
+    var app = express();
 
     var argv = process.argv.slice(2);
 
@@ -36,9 +27,9 @@ async function run() {
 //        
 //    }
 
-    app.listen(settings.serverPort);
+    app.listen(settings.server.port);
 
-    console.log(process.env.NODE_ENV + " server listening on port " + settings.serverPort);
+    console.log(process.env.NODE_ENV + " server listening on port " + settings.server.port);
 }
 
 run();

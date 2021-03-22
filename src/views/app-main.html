@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-sm-3" ng-if="mainCtrl.leftSidebar">
+        <app-lside></app-lside>
+    </div>
+    <div ng-class="mainCtrl.leftSidebar && mainCtrl.rightSidebar ? 'col-sm-6' : mainCtrl.leftSidebar || mainCtrl.rightSidebar ? 'col-sm-9' : 'col-sm-12'" >
+        <section ng-view></section>
+    </div>
+    <div class="col-sm-3" ng-if="mainCtrl.rightSidebar">
+        <app-rside></app-rside>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<footer class="app-footer">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <!--        <span class="navbar-text align-middle mr-auto">
+                    <a href="#"><span class="fab fa-facebook-square text-white"></span></a>
+                    <a href="#"><span class="fab fa-twitter-square text-white"></span></a>
+                    <a href="#"><span class="fab fa-telegram text-white"></span></a>
+                    <a href="#"><span class="fab fa-discord text-white"></span></a>
+                </span>-->
+        <span class="navbar-text mr-auto" ng-if="footerCtrl.latestBlockNumber != -1">
+            {{ footerCtrl.latestBlockNumber }}
+        </span>
+        <span class="navbar-text ml-auto">
+            <a href="/about">
+                {{ footerCtrl.systemService.settings.name }}, ver. {{ footerCtrl.systemService.settings.version }}
+            </a>
+        </span>
+    </nav>
+</footer>
